@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.target=Image
-comment0.text=\r\n\ @author\ (Nauval\ Muhammad\ Firdaus)\r\n\ NIM\:\ 2301906331\r\n\ Kelas\ Besar\:\ CA04\r\n\ Kelas\ Kecil\:\ LB04\r\n
-comment1.params=x\ y
-comment1.target=void\ setSize(int,\ int)
-comment2.params=path
-comment2.target=void\ setImage(java.lang.String)
-numComments=3
