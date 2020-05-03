@@ -12,8 +12,10 @@ public class Image extends Actor
     int xSize, ySize;
     
     public void setSize(int x, int y) 
-    { 
+    {
+        // Greenfoot doesn't support resize to 0 value.
         if (x == 0 || y == 0) return;
+        
         getImage().scale(x, y);
         xSize = x;
         ySize = y;
@@ -22,10 +24,14 @@ public class Image extends Actor
     public void setImage(String path) 
     {
         GreenfootImage img = new GreenfootImage(path);
+        
+        // If there is no image resource attached yet, then simply set image
         if (xSize == 0 && ySize == 0 && getImage() == null) 
         {
             setImage(img);
-        } else if (getImage() != img) 
+        } 
+        // If the image resource is a new resource, then update the image and maintain its size.
+        else if (getImage() != img) 
         {
             setImage(img);
             setSize(xSize, ySize);

@@ -12,12 +12,13 @@ public class MainMenu extends CustomWorld
     Button exitBtn;
     
     public MainMenu() { prepare(); }
-
-    private void prepare() 
+    
+    public void prepare() 
     {
         playBtn = new Button();
         exitBtn = new Button();
         
+        // Add object to the world, and set its position
         addObject(playBtn, getWidth() / 2, 355);
         addObject(exitBtn, getWidth() / 2, 410);
         
@@ -30,12 +31,9 @@ public class MainMenu extends CustomWorld
     
     public void act() 
     {
-        if (playBtn.isClicked()) 
-        {
-            Greenfoot.setWorld(new Gameplay());
-        } else if (exitBtn.isClicked()) 
-        {
-            System.out.println("Exit!");
-        }
+        super.act();
+        
+        if (playBtn.isClicked()) Greenfoot.setWorld(new Gameplay());
+        else if (exitBtn.isClicked()) System.out.println("Exit!");
     }
 }

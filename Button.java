@@ -10,7 +10,11 @@ public class Button extends Image
 {
     public boolean isClicked() 
     {
-        if (Greenfoot.mouseClicked(this)) return true;
+        if (Greenfoot.mouseClicked(this)) 
+        {
+            ((CustomWorld)getWorld()).sfx.playSound("click.mp3", 90);
+            return true;
+        }
         return false;
     }
 }

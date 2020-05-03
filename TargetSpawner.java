@@ -8,7 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class TargetSpawner extends Actor
 {
+    // Spawn position offset
     int offset = 10;
+    
+    // Spawn delay properties
     int spawnDelay = 60;
     int delay = 0;
     
@@ -20,8 +23,9 @@ public class TargetSpawner extends Actor
         {
             delay = spawnDelay;
             int spawnPos = Greenfoot.getRandomNumber(getWorld().getWidth() - (offset * 2)) + offset;
-            int targetType = Greenfoot.getRandomNumber(7);
             
+            // Randomize the spawn objects
+            int targetType = Greenfoot.getRandomNumber(7);
             if (targetType <= 4) 
             {
                 getWorld().addObject(new Point(), spawnPos, 0);

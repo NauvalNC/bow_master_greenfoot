@@ -36,7 +36,7 @@ public class Gameplay extends CustomWorld
     }
     
     // Prepare the UI and pre-actors
-    void prepare() 
+    public void prepare() 
     {
         scoreTxt = new Text();
         addObject(scoreTxt, scoreTxt.getImage().getHeight() / 2 + 50, scoreTxt.getImage().getHeight() / 2 + 15);
@@ -51,6 +51,8 @@ public class Gameplay extends CustomWorld
     
     public void act() 
     {
+        super.act();
+        
         if (isGameOver()) 
         {
             Greenfoot.setWorld(new GameOver(score));

@@ -20,12 +20,16 @@ public class Point extends Target
     public Point() 
     {
         int rand = Greenfoot.getRandomNumber(icons.length);
+        
+        // Randomize the image source
         setImage(icons[rand]);
     }
     
     public void getHit() 
     {
+        // When get hit, add score
         ((Gameplay)getWorld()).addScore();
+        ((CustomWorld)getWorld()).sfx.playSound("splash.mp3", 50);
         super.getHit();
     }
 }

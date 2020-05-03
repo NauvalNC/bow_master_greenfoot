@@ -16,18 +16,13 @@ public class Arrow extends Image
     {
         setSize(99, 22);
         setImage("arrow.png");
+        
+        // Turn the arrow's point to up direction
         turn(normalRot);
     }
     
-    public void checkBoundaries()
-    {
-        if (getX() < offset || getY() < offset ||
-            getX() > getWorld().getWidth() - offset ||
-            getY() > getWorld().getHeight() - offset) 
-        {
-            getWorld().removeObject(this);
-        }
-    }
+    // Destroy arrow if it is out of world bound
+    public void checkBoundaries() { if (getY() < offset) getWorld().removeObject(this); }
     
     public void act()
     {

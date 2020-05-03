@@ -12,6 +12,7 @@ public class Text extends Actor
     Color color;
     int size;
     
+    // On constructor, print default text
     public Text() { setText("Hello World!", 30, Color.WHITE); }
     
     public void setText(String text, int size, Color color) 
