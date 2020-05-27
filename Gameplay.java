@@ -9,63 +9,50 @@ import java.util.List;
  */
 public class Gameplay extends CustomWorld
 {
-    // Scoring variables
-    Text scoreTxt;
-    int score;
+    public GameManager manager;
     
-    // Scoring Method
-    public void addScore() { score += 1; }
+    int spawnDelay = 60;
+    int minSpawnDelay = 5;
+    int spawnReducer = 5;
     
-    // Player variable
-    public Player player;
-    
-    // Target Spawner
-    TargetSpawner targetSpawner;
+    int delaySpace = 10;
     
     public Gameplay() 
     {
-        // Initialize start value
-        score = 0;
         prepare();
-    }
-    
-    boolean isGameOver() 
-    {
-        if (player.health.getHealth() <= 0) return true;
-        return false;
     }
     
     // Prepare the UI and pre-actors
     public void prepare() 
     {
-        scoreTxt = new Text();
-        addObject(scoreTxt, scoreTxt.getImage().getHeight() / 2 + 50, scoreTxt.getImage().getHeight() / 2 + 15);
-        
-        player = new Player();
-        addObject(player, getWidth() / 2, getHeight() - 50);
-        player.setup();
-        
-        targetSpawner = new TargetSpawner();
-        addObject(targetSpawner, getWidth() / 2, 0);
+        manager = new GameManager();
+        addObject(manager, 0, 0);
+        manager.prepare(false);
+        manager.targetSpawner.setSpawnDelay(spawnDelay);
     }
     
     public void act() 
     {
-        super.act();
-        
-        if (isGameOver()) 
+        if (manager.getScore() == delaySpace && spawnDelay > minSpawnDelay) 
         {
-            Greenfoot.setWorld(new GameOver(score));
-            return;
+            delaySpace += delaySpace;
+            spawnDelay -= spawnReducer;
+            manager.targetSpawner.setSpawnDelay(spawnDelay);
         }
-        
-        // Set score
-        scoreTxt.setText("Score: " + score, 30, Color.WHITE);
-        
-        // Call player behaviour frame per frame
-        player.onFrame();
-        
-        // Spawn target
-        targetSpawner.spawn();
+    }
+    
+    public void point() 
+    {
+        manager.addScore();
+    }
+    
+    public void recovery() 
+    {
+        if (manager.player.health != null) manager.player.health.addHealth();
+    }
+    
+    public void demerit() 
+    {
+        if (manager.player.health != null) manager.player.health.subHealth();
     }
 }

@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=GameOver
 comment0.text=\r\n\ @author\ (Nauval\ Muhammad\ Firdaus)\r\n\ NIM\:\ 2301906331\r\n\ Kelas\ Besar\:\ CA04\r\n\ Kelas\ Kecil\:\ LB04\r\n
-comment1.params=score
-comment1.target=GameOver(int)
+comment1.params=sender\ score
+comment1.target=GameOver(java.lang.Object,\ int)
 comment2.params=
 comment2.target=void\ prepare()
 comment3.params=

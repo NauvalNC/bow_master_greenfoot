@@ -16,10 +16,13 @@ public class GameOver extends CustomWorld
     Button playAgain;
     Button mainMenu;
     
+    Object sender;
+    
     // Get the score from passed parameter
-    public GameOver(int score) 
+    public GameOver(Object sender, int score) 
     { 
         this.score = score;
+        this.sender = sender;
         prepare();
         sfx.playSound("tada.mp3", 60);
     }
@@ -51,7 +54,11 @@ public class GameOver extends CustomWorld
     {
         super.act();
         
-        if (playAgain.isClicked()) Greenfoot.setWorld(new Gameplay());
+        if (playAgain.isClicked()) 
+        {
+            if (sender.getClass() == Classic.class) Greenfoot.setWorld(new Classic());
+            else if (sender.getClass() == Frenzy.class) Greenfoot.setWorld(new Frenzy());
+        }
         else if (mainMenu.isClicked()) Greenfoot.setWorld(new MainMenu());
     }
 }

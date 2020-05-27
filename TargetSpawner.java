@@ -15,6 +15,13 @@ public class TargetSpawner extends Actor
     int spawnDelay = 60;
     int delay = 0;
     
+    boolean withRecovery;
+    
+    public TargetSpawner(boolean withRecovery) 
+    {
+        this.withRecovery = withRecovery;
+    }
+    
     public void setSpawnDelay(int delay) { spawnDelay = delay; }
     
     public void spawn() 
@@ -25,14 +32,14 @@ public class TargetSpawner extends Actor
             int spawnPos = Greenfoot.getRandomNumber(getWorld().getWidth() - (offset * 2)) + offset;
             
             // Randomize the spawn objects
-            int targetType = Greenfoot.getRandomNumber(7);
-            if (targetType <= 4) 
+            int targetType = Greenfoot.getRandomNumber(11);
+            if (targetType <= 6) 
             {
                 getWorld().addObject(new Point(), spawnPos, 0);
-            } else if (targetType == 5) 
+            } else if (targetType >= 7 && targetType <= 9) 
             {
                 getWorld().addObject(new Demerit(), spawnPos, 0);
-            } else if (targetType == 6) 
+            } else if (targetType == 10 && withRecovery) 
             {
                 getWorld().addObject(new Recovery(), spawnPos, 0);
             }

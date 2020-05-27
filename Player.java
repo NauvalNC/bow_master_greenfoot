@@ -1,3 +1,4 @@
+
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
@@ -15,6 +16,9 @@ public class Player extends Image
     // Delay properties for shooting
     int delay = 0;
     int shotDelay = 30;
+    
+    boolean isFrenzyMode = false;
+    int frenzyShotDelay = 20;
     
     public Player() { setSize(120, 93); }
     
@@ -39,6 +43,13 @@ public class Player extends Image
             delay = shotDelay;
             getWorld().addObject(new Arrow(), getX(), getY());
             ((CustomWorld)getWorld()).sfx.playSound("shoot.mp3", 80);
+            
+            if (isFrenzyMode) 
+            {
+                delay = frenzyShotDelay;
+                getWorld().addObject(new Arrow(45), getX(), getY());
+                getWorld().addObject(new Arrow(-45), getX(), getY());
+            }
         }
     }
     

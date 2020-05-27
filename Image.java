@@ -36,6 +36,15 @@ public class Image extends Actor
             setImage(img);
             setSize(xSize, ySize);
         }
-        
+    }
+    
+    public void show() 
+    {
+        getImage().setTransparency(255);
+    }
+    
+    public void hide() 
+    {
+        getImage().setTransparency(0);
     }
 }

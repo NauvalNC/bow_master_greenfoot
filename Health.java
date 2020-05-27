@@ -65,6 +65,8 @@ public class Health extends Actor
         if (health - 1 < 0) return;
         health -= 1;
         drawHealth();
+        
+        if (health <= 0) ((Gameplay)getWorld()).manager.setGameOver();
     }
     
     int getHealth() { return health; }

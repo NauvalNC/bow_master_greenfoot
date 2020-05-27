@@ -40,4 +40,9 @@ public class Sound extends Actor
         setVolume(volume);
         playSound(path);
     }
+    
+    public void stop() 
+    {
+        sound.stop();
+    }
 }

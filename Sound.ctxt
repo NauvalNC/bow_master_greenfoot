@@ -13,4 +13,6 @@ comment5.params=path
 comment5.target=void\ playSound(java.lang.String)
 comment6.params=path\ volume
 comment6.target=void\ playSound(java.lang.String,\ int)
-numComments=7
+comment7.params=
+comment7.target=void\ stop()
+numComments=8

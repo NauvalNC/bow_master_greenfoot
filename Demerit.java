@@ -12,8 +12,7 @@ public class Demerit extends Target
     
     public void getHit() 
     {
-        // Decrease health by one
-        ((Gameplay)getWorld()).player.health.subHealth();
+        ((Gameplay)getWorld()).demerit();
         ((CustomWorld)getWorld()).sfx.playSound("break.mp3", 90);
         super.getHit();
     }

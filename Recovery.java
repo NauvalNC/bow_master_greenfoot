@@ -13,7 +13,7 @@ public class Recovery extends Target
     public void getHit() 
     {
         // Increase health by one
-        ((Gameplay)getWorld()).player.health.addHealth();
+        ((Gameplay)getWorld()).recovery();
         ((CustomWorld)getWorld()).sfx.playSound("blop.mp3", 70);
         super.getHit();
     }

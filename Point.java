@@ -27,8 +27,7 @@ public class Point extends Target
     
     public void getHit() 
     {
-        // When get hit, add score
-        ((Gameplay)getWorld()).addScore();
+        ((Gameplay)getWorld()).point();
         ((CustomWorld)getWorld()).sfx.playSound("splash.mp3", 50);
         super.getHit();
     }
