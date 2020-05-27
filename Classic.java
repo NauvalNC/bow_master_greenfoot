@@ -8,5 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Classic extends Gameplay
 {
-    public Classic() {}
+    public Classic() 
+    {
+        setBackground(new GreenfootImage("background.png"));
+        getBackground().scale(super.getWidth(), super.getHeight());
+    }
 }

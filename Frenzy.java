@@ -25,6 +25,12 @@ public class Frenzy extends Gameplay
     int defSpawnDelay = 25;
     int frenzySpawnDelay = 5;
     
+    public Frenzy() 
+    {
+        setBackground(new GreenfootImage("background.png"));
+        getBackground().scale(super.getWidth(), super.getHeight());
+    }
+    
     public void prepare() 
     {
         manager = new GameManager();
