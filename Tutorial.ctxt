@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Tutorial
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Tutorial\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ @author\ (Nauval\ Muhammad\ Firdaus)\r\n\ NIM\:\ 2301906331\r\n\ Kelas\ Besar\:\ CA04\r\n\ Kelas\ Kecil\:\ LB04\r\n
 comment1.params=mode
 comment1.target=Tutorial(java.lang.String)
 comment2.params=
