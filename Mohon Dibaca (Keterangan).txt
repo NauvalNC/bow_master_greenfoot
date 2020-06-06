@@ -1,0 +1,17 @@
+Project game Greenfoot "Bow Master" dibuat oleh:
+
+Nama		: Nauval Muhammad Firdaus
+NIM		: 2301906331
+Kelas Kecil	: LB04
+Kelas Besar	: CA04
+
+Jika ada kendala, Anda dapat mengunduh project greenfootnya pada link berikut.
+Google Drive	: https://drive.google.com/file/d/1Ha99ZZ8ff_033-Q6NdFXwifIsezFqHLQ/view?usp=sharing
+GitHub		: https://github.com/NauvalNC/bow_master_greenfoot
+
+Credit Asset
+Asset Pinterest	: https://id.pinterest.com/infouredges/project-references
+Free SFX	: http://soundbible.com
+Free BGM	: https://www.bensound.com/royalty-free-music/track/little-idea
+
+Terima kasih.
