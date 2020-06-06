@@ -1,12 +1,13 @@
 ------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all he/she needs to know. The comments should usually include at least:
+BOW MASTER (GREENFOOT PROJECT)
 ------------------------------------------------------------------------
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
+PROJECT TITLE: Bow Master
+PURPOSE OF PROJECT: Education
+VERSION or DATE: v1 / 6 June 2020
+HOW TO START THIS PROJECT: Use Greenfoot Software
+AUTHORS: Nauval Muhammad Firdaus
 USER INSTRUCTIONS:
+1. Download/Clone the project
+2. Download/Open Greenfoot software (https://www.greenfoot.org/download)
+3. Open the cloned project using Greenfoot.
