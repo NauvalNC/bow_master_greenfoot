@@ -5,6 +5,11 @@ NIM		: 2301906331
 Kelas Kecil	: LB04
 Kelas Besar	: CA04
 
+Versi Greenfoot yang digunakan: 3.6.1
+
+Link game yang sudah dipublikasikan di platform Greenfoot sebagai berikut.
+https://www.greenfoot.org/scenarios/25933 
+
 Jika ada kendala, Anda dapat mengunduh project greenfootnya pada link berikut.
 Google Drive	: https://drive.google.com/file/d/1Ha99ZZ8ff_033-Q6NdFXwifIsezFqHLQ/view?usp=sharing
 GitHub		: https://github.com/NauvalNC/bow_master_greenfoot
