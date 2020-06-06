@@ -1,4 +1,4 @@
-# bow_master_greenfoot
+# "Bow Master" Greenfoot Porject
 Project Bow Master game using Greenfoot
 
 Developer: Nauval Muhammad Firdaus
