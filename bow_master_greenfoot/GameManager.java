@@ -15,7 +15,11 @@ public class GameManager extends Actor
     // Scoring Method
     public void addScore() { score += 1; }
     
-    public void addScore(int n) { if (score + n >= 0) score += n; }
+    public void addScore(int n) 
+    { 
+        if (score + n >= 0) score += n; 
+        else score = 0;
+    }
     
     public int getScore() { return score; }
     
