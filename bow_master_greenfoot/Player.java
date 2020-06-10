@@ -26,7 +26,7 @@ public class Player extends Image
         setSize(120, 93); 
     }
     
-    public void setup() 
+    public void setupHealth() 
     {
         // Initiate the health object after player is initiated
         health = new Health(3);
@@ -48,6 +48,7 @@ public class Player extends Image
             getWorld().addObject(new Arrow(), getX(), getY());
             ((CustomWorld)getWorld()).sfx.playSound("shoot.mp3", 80);
             
+            // If frenzy mode, spawn three different directions of arrow (left, right, and front) 
             if (isFrenzyMode) 
             {
                 delay = frenzyShotDelay;

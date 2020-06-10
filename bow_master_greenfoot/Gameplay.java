@@ -1,5 +1,4 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.util.List;
 
 /**
  * @author (Nauval Muhammad Firdaus)
@@ -36,6 +35,8 @@ public class Gameplay extends CustomWorld
     
     public void act() 
     {
+        if (manager.player.health.getHealth() <= 0) manager.setGameOver();
+        
         if (manager.getScore() == delaySpace && spawnDelay > minSpawnDelay) 
         {
             delaySpace += delaySpace;

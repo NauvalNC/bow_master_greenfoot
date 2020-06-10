@@ -15,7 +15,11 @@ public class GameManager extends Actor
     // Scoring Method
     public void addScore() { score += 1; }
     
-    public void addScore(int n) { if (score + n >= 0) score += n; }
+    public void addScore(int n) 
+    { 
+        if (score + n >= 0) score += n; 
+        else score = 0;
+    }
     
     public int getScore() { return score; }
     
@@ -24,7 +28,6 @@ public class GameManager extends Actor
     
     // Target Spawner
     public TargetSpawner targetSpawner;
-    boolean withReccovery;
     
     public GameManager() 
     {
@@ -47,7 +50,7 @@ public class GameManager extends Actor
         getWorld().addObject(player, getWorld().getWidth() / 2, getWorld().getHeight() - 50);
         if (isFrenzyMode == false) 
         {
-            player.setup();
+            player.setupHealth();
         }
         
         targetSpawner = new TargetSpawner((isFrenzyMode) ? false : true);

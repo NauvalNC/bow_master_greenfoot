@@ -33,6 +33,7 @@ public class Arrow extends Image
     // Destroy arrow if it is out of world bound
     public void checkBoundaries() 
     { 
+        // If hit the side edge (vertical wall) then the arrow should bounce.
         if (getRotation() != 270) 
         {
             if (getX() > getWorld().getWidth() - offset) turn(normalRot);
