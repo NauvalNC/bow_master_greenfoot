@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Gameplay
+comment0.text=\r\n\ @author\ (Nauval\ Muhammad\ Firdaus)\r\n\ NIM\:\ 2301906331\r\n\ Kelas\ Besar\:\ CA04\r\n\ Kelas\ Kecil\:\ LB04\r\n
+comment1.params=
+comment1.target=Gameplay()
+comment2.params=
+comment2.target=void\ prepare()
+comment3.params=
+comment3.target=void\ act()
+comment4.params=
+comment4.target=void\ point()
+comment5.params=
+comment5.target=void\ recovery()
+comment6.params=
+comment6.target=void\ demerit()
+numComments=7
